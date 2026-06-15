@@ -1,0 +1,27 @@
+﻿=== Verification Report: oh-my-openagent.json ===
+Date: 2026-06-15T09:55
+
+Model Counts:
+- opencode-go/qwen3.7-plus: 7 (expected: 7)
+- opencode-go/deepseek-v4-flash: 11 (expected: 11)
+- opencode-go/mimo-v2.5: 1 (expected: 1)
+
+Changed Entries (deepseek-v4-flash → qwen3.7-plus):
+1. agents.oracle.model ✅
+2. agents.metis.model ✅
+3. agents.momus.model ✅
+4. agents.prometheus.model ✅
+5. categories.ultrabrain.model ✅
+6. categories.deep.model ✅
+7. categories.artistry.model ✅
+
+Unchanged Entries (verified still deepseek-v4-flash):
+- sisyphus ✅, hephaestus ✅, librarian ✅, explore ✅
+- atlas ✅, sisyphus-junior ✅
+- visual-engineering ✅, quick ✅, unspecified-low ✅
+- unspecified-high ✅, writing ✅
+
+Unchanged Entry (mimo-v2.5):
+- multimodal-looker ✅
+
+RESULT: ✅ ALL CHECKS PASSED
