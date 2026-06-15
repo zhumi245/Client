@@ -398,7 +398,7 @@
 
   **提交**: YES | `feat: 实现NetworkClient网络通信模块（继承IDataSource）` | networkclient.h/cpp, .pro
 
-- [ ] 4. 实现 MainWindow 主窗口框架（支持Mock/Network双模式）
+- [x] 4. 实现 MainWindow 主窗口框架（支持Mock/Network双模式）
 
   **做什么**:
   1. 创建 `mainwindow.h` 和 `mainwindow.cpp`
@@ -477,7 +477,7 @@
   - 文件: `mainwindow.h, mainwindow.cpp, main.cpp, dashboard.pro`
   - 验证: `qmake + mingw32-make`
 
-- [ ] 5. 实现 Speedometer 速度表
+- [x] 5. 实现 Speedometer 速度表
 
   **做什么**:
   1. 创建 `speedometer.h` 和 `speedometer.cpp`
@@ -538,7 +538,7 @@
   - 文件: `speedometer.h, speedometer.cpp, dashboard.pro`
   - 验证: `qmake + mingw32-make`
 
-- [ ] 6. 实现 RpmGauge 转速表
+- [x] 6. 实现 RpmGauge 转速表
 
   **做什么**:
   1. 创建 `rpmgauge.h` 和 `rpmgauge.cpp`
@@ -586,7 +586,7 @@
   - 文件: `rpmgauge.h, rpmgauge.cpp, dashboard.pro`
   - 验证: `qmake + mingw32-make`
 
-- [ ] 7. 实现 FuelGauge + TempGauge 油量表和水温表
+- [x] 7. 实现 FuelGauge + TempGauge 油量表和水温表
 
   **做什么**:
   1. 创建 `fuelgauge.h/cpp` 和 `tempgauge.h/cpp`（或者合并为一个 `gauges.h/cpp` 带两个类）
@@ -654,7 +654,7 @@
   - 文件: `fuelgauge.h, fuelgauge.cpp, tempgauge.h, tempgauge.cpp, dashboard.pro`
   - 验证: `qmake + mingw32-make`
 
-- [ ] 8. 实现 TurnIndicator 转向灯
+- [x] 8. 实现 TurnIndicator 转向灯
 
   **做什么**:
   1. 创建 `turnindicator.h/cpp`
@@ -688,7 +688,7 @@
 
   **提交**: YES | `feat: 实现TurnIndicator转向灯` | turnindicator.h/cpp, .pro
 
-- [ ] 9. 实现 WarningLights 报警灯组
+- [x] 9. 实现 WarningLights 报警灯组
 
   **做什么**:
   1. 创建 `warninglights.h/cpp`
@@ -724,7 +724,7 @@
 
   **提交**: YES | `feat: 实现WarningLights报警灯组` | warninglights.h/cpp, .pro
 
-- [ ] 10. 实现 WarningSoundSystem 报警音效系统
+- [x] 10. 实现 WarningSoundSystem 报警音效系统
 
   **做什么**:
   1. 创建 `warningsoundsystem.h/cpp`
@@ -758,7 +758,7 @@
 
   **提交**: YES | `feat: 实现WarningSoundSystem报警音效系统` | warningsoundsystem.h/cpp, .pro
 
-- [ ] 11. 菜单栏集成 + 全组件联动
+- [x] 11. 菜单栏集成 + 全组件联动
 
   **做什么**:
   1. 完善 MainWindow 的3个菜单功能
@@ -813,7 +813,7 @@
 
   **提交**: YES | `feat: 菜单栏集成与全组件联动` | mainwindow.h/cpp, .pro
 
-- [ ] 12. 编写接口文档（含Mock占位标注）
+- [x] 12. 编写接口文档（含Mock占位标注）
 
   **做什么**:
   1. 在项目根目录创建 `工作接口文档.md`
@@ -916,7 +916,7 @@
 
   **提交**: YES | `docs: 编写前后端接口文档（含Mock占位标注）` | `工作接口文档.md`
 
-- [ ] 13. 联调测试与Bug修复
+- [x] 13. 联调测试与Bug修复
 
   **做什么**:
   1. 启动P6模拟器（或自行启动测试服务），用 `--connect` 模式连接
@@ -936,7 +936,7 @@
 
   **提交**: YES | `fix: 联调测试与Bug修复` | 修改过的文件
 
-- [ ] 14. 最终打磨 + 配置文件
+- [x] 14. 最终打磨 + 配置文件
 
   **做什么**:
   1. 创建 `run.bat`:
@@ -966,7 +966,7 @@
 
 > 以下4个验证步骤在全部任务完成后依次执行。
 
-- [ ] F1. **编译验证**
+- [x] F1. **编译验证**
   从干净状态重建:
   ```bash
   cd work/dashboard
@@ -976,12 +976,12 @@
   ```
   预期: 退出码0，debug/dashboard.exe 存在
 
-- [ ] F2. **运行验证**
+- [x] F2. **运行验证**
   1. 运行 dashboard.exe（需 qt.conf 或 PATH 设置正确）
   2. 截图确认窗口显示
   3. 检查窗口标题、大小、布局
 
-- [ ] F3. **视觉QA验证**
+- [x] F3. **视觉QA验证**
   使用视觉模型检查:
   1. 速度表刻度完整，半圆弧清晰
   2. 转速表与速度表对称
@@ -990,7 +990,7 @@
   5. 报警灯图标加载正常
   6. 整体配色符合需求（深蓝黑背景，霓虹绿/红点缀）
 
-- [ ] F4. **git历史验证**
+- [x] F4. **git历史验证**
   ```bash
   cd work/dashboard
   git log --oneline
