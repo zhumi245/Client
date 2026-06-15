@@ -97,7 +97,7 @@ void RpmGauge::drawLabels(QPainter &painter)
     for (int rpm = 0; rpm <= 8000; rpm += 1000) {
         double angle = rpmToAngle(static_cast<double>(rpm));
         double rad = qDegreesToRadians(angle);
-        int labelR = 72;
+        int labelR = 75;
 
         QString text;
         if (rpm == 0) {

@@ -107,7 +107,7 @@ void Speedometer::drawLabels(QPainter &painter)
 
         double angle = speedToAngle(static_cast<double>(speed));
         double rad = qDegreesToRadians(angle);
-        int labelR = 72;
+        int labelR = 75;
 
         QString text = QString::number(speed);
         QRectF textRect(CX + labelR * qCos(rad) - 15,

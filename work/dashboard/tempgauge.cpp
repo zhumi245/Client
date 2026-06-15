@@ -98,7 +98,7 @@ void TempGauge::drawLabels(QPainter &painter)
     for (int i = 0; i < 5; ++i) {
         double angle = tempToAngle(static_cast<double>(TICKS[i]));
         double rad = qDegreesToRadians(angle);
-        int labelR = 53;
+        int labelR = 58;
 
         QString text = QString::number(TICKS[i]);
         QRectF textRect(CX + labelR * qCos(rad) - 14,
