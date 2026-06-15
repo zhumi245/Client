@@ -1,0 +1,10 @@
+# Build artifacts
+Makefile
+Makefile.Debug
+Makefile.Release
+release/
+debug/
+*.o
+*.exe
+qt.conf
+object_script.*
