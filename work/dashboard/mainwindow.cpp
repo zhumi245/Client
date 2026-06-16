@@ -95,7 +95,7 @@ void MainWindow::setupUI()
     centerLayout->addLayout(gaugeLayout);
 
     // Extra space before warning lights to avoid crowding gauge arcs
-    centerLayout->addSpacing(20);
+    centerLayout->addSpacing(60);
 
     // WarningLights
     m_warningLights = new WarningLights();
