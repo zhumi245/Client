@@ -98,10 +98,9 @@ void MainWindow::setupUI()
     // Extra space before warning lights to avoid crowding gauge arcs
     centerLayout->addSpacing(20);
 
-    // WarningLights + stretch to push everything upward
+    // WarningLights
     m_warningLights = new WarningLights();
     centerLayout->addWidget(m_warningLights);
-    centerLayout->addStretch();
 
     mainLayout->addWidget(centerPanel);
 
