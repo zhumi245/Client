@@ -15,7 +15,7 @@ REM      dashboard.exe --connect
 REM  即可联调。
 REM ============================================================
 
-set PATH=D:\2026Qt\QT\5.3\mingw482_32\bin;D:\2026Qt\QT\Tools\mingw482_32\bin;%PATH%
+set PATH=D:\QT\Qt5.3.2\5.3\mingw482_32\bin;D:\QT\Qt5.3.2\Tools\mingw482_32\bin;%PATH%
 
 echo.
 echo  ==========================================================
