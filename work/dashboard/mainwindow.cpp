@@ -80,7 +80,6 @@ void MainWindow::setupUI()
     QVBoxLayout *centerLayout = new QVBoxLayout(centerPanel);
     centerLayout->setSpacing(10);
     centerLayout->setAlignment(Qt::AlignCenter);
-    centerLayout->setContentsMargins(0, 8, 0, 0);  // offset center only
 
     // TurnIndicator at top
     m_turnIndicator = new TurnIndicator();
@@ -102,7 +101,12 @@ void MainWindow::setupUI()
     m_warningLights = new WarningLights();
     centerLayout->addWidget(m_warningLights);
 
-    mainLayout->addWidget(centerPanel);
+    // Wrap centerPanel with 8px top to match original layout baseline
+    QWidget *centerWrap = new QWidget();
+    QVBoxLayout *centerOuter = new QVBoxLayout(centerWrap);
+    centerOuter->setContentsMargins(0, 8, 0, 0);
+    centerOuter->addWidget(centerPanel);
+    mainLayout->addWidget(centerWrap);
 
     // Right: RpmGauge wrapped with stretch to push it upward
     QWidget *rightWrap = new QWidget();
