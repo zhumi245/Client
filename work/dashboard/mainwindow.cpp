@@ -63,13 +63,13 @@ void MainWindow::setupUI()
 {
     QWidget *central = new QWidget(this);
     QHBoxLayout *mainLayout = new QHBoxLayout(central);
-    mainLayout->setContentsMargins(8, 0, 8, 8);
+    mainLayout->setContentsMargins(8, -20, 8, 8);
     mainLayout->setSpacing(10);
 
     // Left: Speedometer wrapped with stretch to push it upward
     QWidget *leftWrap = new QWidget();
     QVBoxLayout *leftLay = new QVBoxLayout(leftWrap);
-    leftLay->setContentsMargins(0, -10, 0, 0);
+    leftLay->setContentsMargins(0, 0, 0, 0);
     m_speedometer = new Speedometer();
     leftLay->addWidget(m_speedometer);
     mainLayout->addWidget(leftWrap, 0, Qt::AlignTop);
@@ -106,7 +106,7 @@ void MainWindow::setupUI()
     // Right: RpmGauge wrapped with stretch to push it upward
     QWidget *rightWrap = new QWidget();
     QVBoxLayout *rightLay = new QVBoxLayout(rightWrap);
-    rightLay->setContentsMargins(0, -10, 0, 0);
+    rightLay->setContentsMargins(0, 0, 0, 0);
     m_rpmGauge = new RpmGauge();
     rightLay->addWidget(m_rpmGauge);
     mainLayout->addWidget(rightWrap, 0, Qt::AlignTop);
