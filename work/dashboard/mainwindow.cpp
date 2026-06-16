@@ -66,9 +66,13 @@ void MainWindow::setupUI()
     mainLayout->setContentsMargins(8, 8, 8, 8);
     mainLayout->setSpacing(10);
 
-    // Left: Speedometer
-    m_speedometer = new Speedometer();
-    mainLayout->addWidget(m_speedometer);
+    // Left: Speedometer wrapped with stretch to push it upward
+    QWidget *leftWrap = new QWidget();
+    QVBoxLayout *leftLay = new QVBoxLayout(leftWrap);
+    leftLay->setContentsMargins(0, 0, 0, 0);
+    leftLay->addWidget(m_speedometer);
+    leftLay->addStretch();
+    mainLayout->addWidget(leftWrap);
 
     // Center: middle panel (TurnIndicator + Fuel/Temp + WarningLights)
     QWidget *centerPanel = new QWidget();
@@ -93,15 +97,20 @@ void MainWindow::setupUI()
     // Extra space before warning lights to avoid crowding gauge arcs
     centerLayout->addSpacing(20);
 
-    // WarningLights at bottom of center panel
+    // WarningLights + stretch to push everything upward
     m_warningLights = new WarningLights();
     centerLayout->addWidget(m_warningLights);
+    centerLayout->addStretch();
 
     mainLayout->addWidget(centerPanel);
 
-    // Right: RpmGauge
-    m_rpmGauge = new RpmGauge();
-    mainLayout->addWidget(m_rpmGauge);
+    // Right: RpmGauge wrapped with stretch to push it upward
+    QWidget *rightWrap = new QWidget();
+    QVBoxLayout *rightLay = new QVBoxLayout(rightWrap);
+    rightLay->setContentsMargins(0, 0, 0, 0);
+    rightLay->addWidget(m_rpmGauge);
+    rightLay->addStretch();
+    mainLayout->addWidget(rightWrap);
 
     setCentralWidget(central);
 }
