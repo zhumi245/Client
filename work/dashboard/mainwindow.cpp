@@ -104,7 +104,7 @@ void MainWindow::setupUI()
     // Wrap centerPanel with 8px top to match original layout baseline
     QWidget *centerWrap = new QWidget();
     QVBoxLayout *centerOuter = new QVBoxLayout(centerWrap);
-    centerOuter->setContentsMargins(0, 8, 0, 0);
+    centerOuter->setContentsMargins(0, 8, 0, 8);
     centerOuter->addWidget(centerPanel);
     mainLayout->addWidget(centerWrap);
 
