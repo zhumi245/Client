@@ -72,8 +72,7 @@ void MainWindow::setupUI()
     leftLay->setContentsMargins(0, 0, 0, 0);
     m_speedometer = new Speedometer();
     leftLay->addWidget(m_speedometer);
-    leftLay->addStretch();
-    mainLayout->addWidget(leftWrap);
+    mainLayout->addWidget(leftWrap, 0, Qt::AlignTop);
 
     // Center: middle panel (TurnIndicator + Fuel/Temp + WarningLights)
     QWidget *centerPanel = new QWidget();
@@ -110,8 +109,7 @@ void MainWindow::setupUI()
     rightLay->setContentsMargins(0, 0, 0, 0);
     m_rpmGauge = new RpmGauge();
     rightLay->addWidget(m_rpmGauge);
-    rightLay->addStretch();
-    mainLayout->addWidget(rightWrap);
+    mainLayout->addWidget(rightWrap, 0, Qt::AlignTop);
 
     setCentralWidget(central);
 }
