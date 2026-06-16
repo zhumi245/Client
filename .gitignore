@@ -1,0 +1,11 @@
+*.o
+*.exe
+*.app
+moc_*
+ui_*
+qrc_*
+Makefile*
+release/
+debug/
+object_script.*
+*.user
