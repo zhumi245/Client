@@ -63,7 +63,7 @@ void MainWindow::setupUI()
 {
     QWidget *central = new QWidget(this);
     QHBoxLayout *mainLayout = new QHBoxLayout(central);
-    mainLayout->setContentsMargins(8, -20, 8, 8);
+    mainLayout->setContentsMargins(8, 0, 8, 8);
     mainLayout->setSpacing(10);
 
     // Left: Speedometer wrapped with stretch to push it upward

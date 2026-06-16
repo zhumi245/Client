@@ -10,7 +10,7 @@
 // ---------------------------------------------------------------------------
 
 static const int CX = 120;
-static const int CY = 330;
+static const int CY = 300;
 static const int R  = 65;
 static const double START_ANGLE = 225.0;
 static const double SPAN_ANGLE  = 270.0;
@@ -30,7 +30,7 @@ RpmGauge::RpmGauge(QWidget *parent)
     , m_currentValue(0.0)
     , m_targetValue(0.0)
 {
-    setFixedSize(230, 450);
+    setFixedSize(230, 400);
     m_animTimer = new QTimer(this);
     connect(m_animTimer, &QTimer::timeout, [this]() {
         m_currentValue += (m_targetValue - m_currentValue) * 0.1;
