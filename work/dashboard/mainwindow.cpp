@@ -96,7 +96,7 @@ void MainWindow::setupUI()
     centerLayout->addLayout(gaugeLayout);
 
     // Space before warning lights
-    centerLayout->addSpacing(150);
+    centerLayout->addSpacing(20);
 
     // WarningLights
     m_warningLights = new WarningLights();
