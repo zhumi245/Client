@@ -1,0 +1,9 @@
+[sim] final_simulator listening on 0.0.0.0:5000 (waiting for dashboard clients)
+[sim] final_simulator running. Press Ctrl+C to stop.
+[sim] Dashboard clients should connect to 127.0.0.1:5000
+[sim] Dashboard connected: 127.0.0.1:58124  (clients=1)
+[sim] Dashboard connected: 127.0.0.1:54452  (clients=2)
+[sim] Dashboard disconnected  (clients=1)
+[sim] Dashboard connected: 127.0.0.1:51107  (clients=2)
+[sim] Command: turnSignal=1
+[sim] Dashboard disconnected  (clients=1)

@@ -13,10 +13,10 @@ int main(int argc, char *argv[])
     IDataSource *dataSource = 0;
     QStringList args = app.arguments();
 
-    if (args.contains(QString::fromLatin1("--connect"))) {
-        dataSource = new NetworkClient();
-    } else {
+    if (args.contains(QString::fromLatin1("--mock"))) {
         dataSource = new MockDataSource();
+    } else {
+        dataSource = new NetworkClient();
     }
 
     MainWindow w(dataSource);
