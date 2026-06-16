@@ -63,16 +63,17 @@ void MainWindow::setupUI()
 {
     QWidget *central = new QWidget(this);
     QHBoxLayout *mainLayout = new QHBoxLayout(central);
-    mainLayout->setContentsMargins(8, 0, 8, 8);
+    mainLayout->setContentsMargins(8, 8, 8, 8);
     mainLayout->setSpacing(10);
 
-    // Left: Speedometer wrapped with stretch to push it upward
+    // Left: Speedometer + stretch to push it upward
     QWidget *leftWrap = new QWidget();
     QVBoxLayout *leftLay = new QVBoxLayout(leftWrap);
     leftLay->setContentsMargins(0, 0, 0, 0);
     m_speedometer = new Speedometer();
     leftLay->addWidget(m_speedometer);
-    mainLayout->addWidget(leftWrap, 0, Qt::AlignTop);
+    leftLay->addStretch();
+    mainLayout->addWidget(leftWrap);
 
     // Center: middle panel (TurnIndicator + Fuel/Temp + WarningLights)
     QWidget *centerPanel = new QWidget();
@@ -94,27 +95,23 @@ void MainWindow::setupUI()
     gaugeLayout->addWidget(m_tempGauge);
     centerLayout->addLayout(gaugeLayout);
 
-    // Extra space before warning lights to avoid crowding gauge arcs
+    // Space before warning lights
     centerLayout->addSpacing(150);
 
     // WarningLights
     m_warningLights = new WarningLights();
     centerLayout->addWidget(m_warningLights);
 
-    // Wrap centerPanel with 8px top to match original layout baseline
-    QWidget *centerWrap = new QWidget();
-    QVBoxLayout *centerOuter = new QVBoxLayout(centerWrap);
-    centerOuter->setContentsMargins(0, 8, 0, 8);
-    centerOuter->addWidget(centerPanel);
-    mainLayout->addWidget(centerWrap);
+    mainLayout->addWidget(centerPanel);
 
-    // Right: RpmGauge wrapped with stretch to push it upward
+    // Right: RpmGauge + stretch to push it upward
     QWidget *rightWrap = new QWidget();
     QVBoxLayout *rightLay = new QVBoxLayout(rightWrap);
     rightLay->setContentsMargins(0, 0, 0, 0);
     m_rpmGauge = new RpmGauge();
     rightLay->addWidget(m_rpmGauge);
-    mainLayout->addWidget(rightWrap, 0, Qt::AlignTop);
+    rightLay->addStretch();
+    mainLayout->addWidget(rightWrap);
 
     setCentralWidget(central);
 }
