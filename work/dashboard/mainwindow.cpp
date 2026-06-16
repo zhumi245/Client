@@ -80,6 +80,7 @@ void MainWindow::setupUI()
     QVBoxLayout *centerLayout = new QVBoxLayout(centerPanel);
     centerLayout->setSpacing(10);
     centerLayout->setAlignment(Qt::AlignCenter);
+    centerLayout->setContentsMargins(0, 8, 0, 0);  // offset center only
 
     // TurnIndicator at top
     m_turnIndicator = new TurnIndicator();
@@ -95,7 +96,7 @@ void MainWindow::setupUI()
     centerLayout->addLayout(gaugeLayout);
 
     // Extra space before warning lights to avoid crowding gauge arcs
-    centerLayout->addSpacing(180);
+    centerLayout->addSpacing(150);
 
     // WarningLights
     m_warningLights = new WarningLights();
